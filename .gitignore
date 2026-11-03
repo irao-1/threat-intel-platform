@@ -1,50 +1,38 @@
-# Virtual environments
-venv/
-env/
-ENV/
-
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
+env/
+venv/
+*.egg-info/
 dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-
-# Environment variables
-.env
-.env.local
+build/
 
 # IDE
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
+
+# Generated data files (DO NOT COMMIT)
+threat-intel-stix.json
+threat-intel-stix.sync
+threat-intel-stix-*.json
+threat_intelligence.db
+threat_intelligence.db-journal
+threat_analysis_stix.json
+tweet_analysis_output.json
+*.db
+*.sqlite
+
+# Environment
+.env
+.env.local
+.env.example
+config.local.py
 
 # OS
 .DS_Store
 Thumbs.db
-
-# Testing
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Logs
-*.log
-
-# Data files
-*.json
-analysis_output.json

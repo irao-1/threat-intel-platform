@@ -23,6 +23,7 @@ class SandboxCollector(ABC):
         """Ensure analysis has all required fields with defaults."""
         return {
             'task_id': raw_data.get('task_id'),
+            'source': raw_data.get('source'),
             'file': raw_data.get('file', {}),
             'verdict': raw_data.get('verdict', 'unknown'),
             'c2_domains': raw_data.get('c2_domains', []),
@@ -32,5 +33,10 @@ class SandboxCollector(ABC):
             'processes': raw_data.get('processes', []),
             'network_connections': raw_data.get('network_connections', []),
             'registry_modifications': raw_data.get('registry_modifications', []),
-            'mitre_techniques': raw_data.get('mitre_techniques', [])
+            'mitre_techniques': raw_data.get('mitre_techniques', []),
+            'file_hashes': raw_data.get('file_hashes', []),
+            'malware_families': raw_data.get('malware_families', []),
+            'threat_actors': raw_data.get('threat_actors', []),
+            'cves': raw_data.get('cves', []),
+            'sentiment': raw_data.get('sentiment', 'unknown')
         }
